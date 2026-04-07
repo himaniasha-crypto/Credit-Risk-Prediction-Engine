@@ -1,8 +1,3 @@
-
-Himani <himani.asha@gmail.com>
-3:38 PM (0 minutes ago)
-to me
-
 import pandas as pd
 import numpy as np
 from sklearn.model_selection import train_test_split
