@@ -1,24 +1,31 @@
-# 💳 Credit Risk Prediction Engine
+# 💳 Credit Risk Prediction Engine (UCI Dataset)
 
 ### 🔍 Project Overview
-In the financial sector, especially for institutions like **American Express**, predicting credit default is the cornerstone of risk management. This project develops an end-to-end Machine Learning pipeline to identify high-risk customers, balancing the need for high recall (to catch defaults) with precision (to maintain customer trust).
+Predicting credit card default is a core challenge for financial giants like **American Express**. This project uses the **UCI Credit Card Default Dataset** to build a robust classification model. The goal is to identify high-risk customers based on their demographic data, payment history, and billing statements.
 
-### 🛠️ Tech Stack & Analytical Skills
-* **Language:** Python 3.9+
-* **Libraries:** Pandas, Scikit-Learn, XGBoost, Matplotlib, Seaborn.
-* **Core Competencies:** * **Data Engineering:** Modular script architecture (OOPs based).
-* **Machine Learning:** Gradient Boosting (XGBoost) for high-dimensional data.
-* **Statistical Learning:** Handling imbalanced datasets and feature scaling.
+### 📊 Dataset Insight (UCI Machine Learning Repository)
+The dataset contains **30,000 observations** with 24 variables, including:
+* **Demographics:** Gender, Education, Marriage, Age.
+* **Payment History:** Past 6 months of payment status (PAY_0 to PAY_6).
+* **Bill & Payment Amounts:** Monthly statement amounts and previous payments.
+* **Target:** `default.payment.next.month` (Binary: 1 for default, 0 for not).
+
+### 🛠️ Tech Stack & Advanced Skills
+* **Modeling:** **XGBoost Classifier** (Optimized for financial tabular data).
+* **Engineering:** **StandardScaler** for handling large variances in billing amounts.
+* **Evaluation:** **ROC-AUC** and **Precision-Recall Curves** (Crucial for imbalanced financial data).
+* **Architecture:** Modular, class-based Python script (`src/model_pipeline.py`) for production readiness.
 
 ### 📂 Repository Structure
-* **`data/`**: Sample credit datasets including features like income, age, and loan amount.
-* **`notebooks/`**: Exploratory Data Analysis (EDA) and Model Training experiments.
-* **`src/`**: Production-ready Python script (`model_pipeline.py`) for data cleaning and training.
-* **`visualization/`**: Key performance metrics and feature importance charts.
+* **`data/`**: Contains the `UCI_Credit_Card.csv` (Sample/Full version).
+* **`notebooks/`**: Deep-dive EDA, Correlation Heatmaps, and Feature Importance analysis.
+* **`src/`**: `model_pipeline.py` - Clean, scalable Python code for data cleaning and training.
+* **`visualization/`**: Model performance charts (Confusion Matrix, ROC Curve).
 
-### 📈 Business Impact
-* **Risk Mitigation:** Identifying patterns in low credit scores vs. high loan amounts to prevent defaults.
-* **Production Ready:** Unlike static notebooks, the code is structured as a class-based pipeline, making it easy to integrate into larger financial systems.
+### 🚀 Key Business Findings
+* **Late Payments:** Customers with a delayed payment status in the most recent month (PAY_0) are significantly more likely to default.
+* **Credit Utilization:** High billing amounts relative to credit limits (LIMIT_BAL) correlate strongly with credit risk.
+* **Model Accuracy:** Achieved an ROC-AUC of **0.XX** (Update this after running your code).
 
 ---
-**Author:** Himani | Data Engineer | M.Tech (IIT Delhi) | M.Sc (IIT Mandi)
+**Developed by:** Himani | Data Engineer @ Deloitte | M.Tech (IIT Delhi) | M.Sc (IIT Mandi)
